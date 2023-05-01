@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- 메타 태그 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>부트테스트</title>
+</head>
+
+<body>
+<div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+        <a class="p-2 link-secondary" href="#">World</a>
+        <a class="p-2 link-secondary" href="#">U.S.</a>
+        <a class="p-2 link-secondary" href="#">Technology</a>
+        <a class="p-2 link-secondary" href="#">Design</a>
+        <a class="p-2 link-secondary" href="#">Culture</a>
+        <a class="p-2 link-secondary" href="#">Business</a>
+        <a class="p-2 link-secondary" href="#">Politics</a>
+        <a class="p-2 link-secondary" href="#">Opinion</a>
+        <a class="p-2 link-secondary" href="#">Science</a>
+        <a class="p-2 link-secondary" href="#">Health</a>
+        <a class="p-2 link-secondary" href="#">Style</a>
+        <a class="p-2 link-secondary" href="#">Travel</a>
+    </nav>
+</div>
+</div>
+
+<!--main-->
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+            <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
+                efficiently about what’s most interesting in this post’s contents.</p>
+            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+        </div>
+    </div>
+
+<form method="get" action="" class="form" style="margin-left: 7%; margin-top: 5%;">
+  <select name="month" id="id_month">
+    <option value="0" selected>월 선택</option>
+    <option value="01">1월</option>
+    <option value="02">2월</option>
+    <option value="03">3월</option>
+    <option value="04">4월</option>
+    <option value="05">5월</option>
+    <option value="06">6월</option>
+    <option value="07">7월</option>
+    <option value="08">8월</option>
+    <option value="09">9월</option>
+    <option value="10">10월</option>
+    <option value="11">11월</option>
+    <option value="12">2023</option>
+  </select>
+</form>
+
+<script>
+    $(document).ready(function() {
+        $( "select[name=month]" ).val( "{{ month_text }}" );
+        $('select[name=month]').change(function () {
+        console.log($('select[name=month]').val());
+        month = $('select[name=month]').val();
+        $('.form').submit();
+    });
+});
+</script>
+
+
+
+
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+
+</body>
+</html>

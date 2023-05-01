@@ -1,0 +1,138 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- 메타 태그 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"-->
+    <!--          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">-->
+
+    <title>부트테스트</title>
+</head>
+
+<body>
+<h2 class="text-center" m-5>안녕</h2>
+<div class="col mb-3">
+    <nav class="bg-light"></nav>
+    <nav class="navbar navbar-expand navbar-dark bg-dark container" aria-label="Second navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">실거래가조회</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02"
+                    aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">분양권거래조회</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">매매거래조회</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">전세거래조회</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <hr class="my-2">
+    <div class="container">
+        <div class="row" style="font-size:12px">
+            <div class="col-3 p-2 bg-light border">실거래가조회(수도권)
+                <div><a href="{% url 'main:bunyang' %}">아파트분양권</a></div>
+                <div><a href="{% url 'main:bunyang' %}">아파트분양권(서울특별시)</a></div>
+                <div><a href="{% url 'main:bunyang' %}">아파트분양권(경기도)</a></div>
+                <div><a href="{% url 'main:bunyang' %}">아파트분양권(팔도)</a></div>
+                <div><a href="{% url 'main:sale_sma' %}">아파트매매(수도권)</a></div>
+                <div><a href="{% url 'main:sale_sma' %}">아파트매매(서울특별시)</a></div>
+                <div><a href="{% url 'main:sale_sma' %}">아파트매매(경기도)</a></div>
+                <div><a href="{% url 'main:sale_sma' %}">아파트매매(인천광역시)</a></div>
+                <div><a href="{% url 'main:villa_sale' %}">빌라매매(수도권)</a></div>
+                <!--            <ul><a href="{% url 'main:bunyang' %}">아파트분양권</a></ul>-->
+                <!--            <ul><a href="{% url 'main:bunyang' %}">아파트분양권(서울특별시)</a></ul>-->
+                <!--            <ul><a href="{% url 'main:bunyang' %}">아파트분양권(경기도)</a></ul>-->
+                <!--            <ul><a href="{% url 'main:bunyang' %}">아파트분양권(인천광역시</a></ul>-->
+                <!--            <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (수도권)</a></ul>-->
+                <!--            <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (서울특별시)</a></ul>-->
+                <!--            <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (경기도)</a></ul>-->
+                <!--            <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (인천광역시)</a></ul>-->
+                <!--            <ul><a href="{% url 'main:villa_sale' %}">빌라매매 (수도권)</a></ul>-->
+            </div>
+            <div class="col-3">실거래가조회(광역시)
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (지방광역시)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (부산광역시)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (대구광역시)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (대전광역시)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (광주광역시)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (울산광역시)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (세종특별자차시)</a></ul>
+
+            </div>
+            <div class="col-3">실거래가조회(팔도)
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (팔도)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (강원도)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (충북)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (충남)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (전북)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (전남)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (경북)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (경남)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">아파트매매 (제주)</a></ul>
+            </div>
+
+            <div class="col-3">실거래가
+                <ul><a href="{% url 'main:sale_sma' %}">전세(팔도)</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">미정</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">미정</a></ul>
+                <ul><a href="{% url 'main:sale_sma' %}">미정</a></ul>
+            </div>
+        </div>
+
+        <!--        <div class="row">-->
+        <!--            <div class="col-3""-->
+        <!--            <div class="card" style="width: 18rem;">-->
+        <!--                <img src="..." class="card-img-top" alt="...">-->
+        <!--                <div class="card-body">-->
+        <!--                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
+        <!--                        card's content.</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="col-3""-->
+        <!--            <div class="card" style="width: 18rem;">-->
+        <!--                <img src="..." class="card-img-top" alt="...">-->
+        <!--                <div class="card-body">-->
+        <!--                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
+        <!--                        card's content.</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="col-3""-->
+        <!--            <div class="card" style="width: 18rem;">-->
+        <!--                <img src="..." class="card-img-top" alt="...">-->
+        <!--                <div class="card-body">-->
+        <!--                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
+        <!--                        card's content.</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="col-3""-->
+        <!--            <div class="card" style="width: 18rem;">-->
+        <!--                <img src="..." class="card-img-top" alt="...">-->
+        <!--                <div class="card-body">-->
+        <!--                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the-->
+        <!--                        card's content.</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </div>
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+
+</body>
+</html>

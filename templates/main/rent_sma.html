@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <table class="table table-striped" style="font-size:12px">
+        <p>실거래가-전세수도권</p>
+        <thead>
+        <tr>
+            <th>광역시도</th>
+            <th>시자치구</th>
+            <th>법정동</th>
+            <th>아파트</th>
+            <th>전용면적</th>
+            <th>전용</th>
+            <th>보증금</th>
+            <th>월세</th>
+            <th>층</th>
+            <th>기준월</th>
+        </tr></br>
+         </thead>
+        <tbody>
+        {% for value in result %}
+        <tr>
+            <td> {{ value.광역시도 }}</td>
+            <td> {{ value.시자치구 }}</td>
+            <td> {{ value.법정동 }}</td>
+            <td> {{ value.아파트 }}</td>
+            <td> {{ value.전용면적 }}</td>
+            <td> {{ value.전용 }}</td>
+            <td> {{ value.보증금 }}</td>
+            <td> {{ value.월세 }}</td>
+            <td> {{ value.층 }}</td>
+            <td> {{ value.기준월 }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

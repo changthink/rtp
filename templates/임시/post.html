@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    function send() {
+        alert("send");
+        document.getElementById("contents").submit();
+    }
+    </script>
+</head>
+<body>
+    <form id="contents" name="contents" method="post" action="{% url 'main:parameter' %}">
+        {% csrf_token %}
+        id : <input name="id" type="text">
+        pw: <input name="name" type="text">
+        <button type="button" onclick="send();">전송</button>
+    </form>
+</body>
+</html>
